@@ -53,5 +53,17 @@ class analisi:
 #print(Tina.scheda_personale())
 #Dott_Mario=medico('Mario','Mario','medico di base')
 #Dott_Mario.visita_paziente(Tina)                                           test per le classi
-#colesterolo=analisi('colesterolo',150)
-#colesterolo.valuta([100,200])
+#ferritina=analisi('ferritina',82)
+#ferritina.valuta([13,150])
+
+#parte 3
+
+import numpy as np
+
+risultati_ferritina=np.random.randint(0,501,(10))
+media_f=np.mean(risultati_ferritina)
+max_f=np.max(risultati_ferritina)
+min_f=np.min(risultati_ferritina)
+std_f=np.std(risultati_ferritina)
+
+#print(f'\n{risultati_ferritina}\nLa media dei valori è:{media_f}, da un minimo di {min_f}, ad un massimo di {max_f} con uno squarto quadratico medio di {std_f} ')
