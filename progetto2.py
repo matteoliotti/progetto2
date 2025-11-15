@@ -20,3 +20,38 @@ eta_C=22
 CodiceFiscale_C='BNCCRS03R71F205A'
 peso_C=60.5
 analisi_C=['emocromo','Pap test','test della ferritina','test della vitamina D']
+
+#parte 2
+class paziente:
+    def __init__(self,nome,cognome,eta,CF,peso,analisi_effettuate):
+        self.nome=nome
+        self.cognome=cognome
+        self.eta=eta
+        self.CF=CF
+        self.peso=peso
+        self.analisi_effettuate=analisi_effettuate
+    def scheda_personale(self):
+        return f'\nNome: {self.nome}\nCognome: {self.cognome}\nEta: {self.eta}\nCF: {self.CF}\nPeso: {self.peso}\nAnalisi effettuate: {self.analisi_effettuate}\n'
+
+class medico:
+    def __init__(self,nome,cognome,specializzazione):
+        self.nome=nome
+        self.cognome=cognome
+        self.specializzazione=specializzazione
+    def visita_paziente(self,paziente):
+        print(f'\nIl Dott. {self.nome} {self.cognome} sta al momento visitando, {paziente.nome} {paziente.cognome}\n')
+
+class analisi:
+    def __init__(self,controllo,risultato):
+        self.controllo=controllo
+        self.risultato=risultato
+    def valuta(self,norma):
+        if self.risultato>norma[0] and self.risultato<norma[1]:
+            print(f'\nSono arrivati i risultati del test per {self.controllo} ed è tutto in ordine\n')
+
+#Tina=paziente(nome_C,cognome_C,eta_C,CodiceFiscale_C,peso_C,analisi_C)
+#print(Tina.scheda_personale())
+#Dott_Mario=medico('Mario','Mario','medico di base')
+#Dott_Mario.visita_paziente(Tina)                                           test per le classi
+#colesterolo=analisi('colesterolo',150)
+#colesterolo.valuta([100,200])
